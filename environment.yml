@@ -1,0 +1,4 @@
+name: Geo_GPT
+channels:
+  - defaults
+prefix: C:\Users\Nikhil\anaconda3\envs\Geo_GPT

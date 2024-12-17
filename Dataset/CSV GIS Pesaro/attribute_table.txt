@@ -1,0 +1,89 @@
+Sections ISTAT2011 
+
+objectID = a unique identifier for each record
+perimeter = Measurement of the perimeter of the geographic area
+ISTAT_cod = ISTAT code for administrative regions, municipalities, or subdivisions
+pro_com = ISTAT municipality code
+sec_2001 = Sections or subdivisions related to the 2001 census
+sec_2011 = Sections or subdivisions related to the 2001 census
+cod_type = A code indicating the type of area
+cod_ponds = Codes for geographic features like ponds
+cod_rivers = Codes for geographic features like rivers
+cod_lakes = Codes for geographic features like lakes
+cod_lagoons = Codes for geographic features like lagoons
+loc = Information related to localities or populated areas
+loc_2001 = Information related to localities or populated areas in 2001
+loc_2011 = Information related to localities or populated areas in 2011
+type_loc = Type of locality
+type_loc_n = Type of locality
+shape_leng = Length of the shape
+st_area = Area statistics for each geographic entity
+st_lenght = Length statistics for each geographic entity
+
+Buildings2005Pesaro
+
+dxf_layer = the layer in a CAD drawing. This is relate to a geographical or structural grouping
+id_build = A unique identifier for each building
+q_basic = It indicates the base of the building on the ground
+q_gutter = The height of the gutter of the building from the soil 
+year_ctr = It represents the year of construction or establishment of the building
+scale = A numerical scale or code, indicating a category or level of detail for the data
+globalid_1 = A globally unique identifier used in a GIS for precise referencing
+end_year = The year when some aspect of the building ends (e.g., renovations)
+st_area_sh = The area of the building in square meters. These values represent the footprint or land coverage of the building.
+st_length =The perimeter or length-related measurement of the building.
+height = The height of the building in meters.
+
+AddressesPesaro
+
+street = The street name or area description.
+street_num = A house number or a designation within the street
+letter = Additional address details, such as building or apartment identifiers
+X = The X-coordinate in a projected coordinate system, in meters (possibly UTM or a local system used in Italy).
+Y = The Y-coordinate in a projected coordinate system, in meters (possibly UTM or a local system used in Italy).
+
+Neighborhoods2019
+
+neigh = a numerical identifier for each neighborhood, which correspond to an administrative code or index
+denomin = the names of the neighborhoods or districts in Pesaro
+st_area_sh = the area of each neighborhood, in square meters, calculated based on the shapefile geometry
+at_lenght = the length of the boundary for each district
+
+
+Districts2019
+
+district = the name of the district in Pesaro. The numbers correspond to specific geographic areas
+st_area_sh = the area of each district, measured in square meters. The values indicate the geographic size of each district.
+st_length = the total length of the streets within each district, measured in meters. It gives the combined length of all roads, lanes, or streets located within the boundaries of each district.
+
+RoadMap
+
+cod_adm = A unique numerical identifier or code assigned to each street, for administrative or geographic reference
+type_abb = An abbreviation of the type of street 
+name = The full name of the street type corresponding to the abbreviation
+denom_abb = A shortened or abbreviated version of the street's name, including initials or partial names
+denom_ext = The full name of the street, including any descriptive or honorary titles  
+denom_emp = a simplified version of the street name without prefixes or titles, for easier reference
+name_abb = A concatenated version of the street type and its abbreviated name 
+global_id =  A globally unique identifier for each street
+year_ctr = Year of creation or some starting reference year for the street
+year_end = Year of termination or end reference year for the street
+st_length = The length of the street measured in meters
+
+
+MonumentalBond
+
+vn06 = a unique identifier or code for each monumental bond. Each entry refers to a specific protected area or monument.
+st_area_sh = the area of the monumental bond, measured in square meters. It indicates the geographic size of each protected zone or area.
+st_length = the total length of boundaries or features (e.g., walls, edges) associated with the protected area, measured in meters.
+st_area_1 = another measure of area for each monument or bond, a recalculated or alternative area measure in square meters.
+st_length_1 = the total length of the boundaries or features of the monumental bond, but using a different method or measurement system
+
+
+
+
+
+
+
+
+
