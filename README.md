@@ -12,10 +12,9 @@
 
 2. **Create a Virtual Environment**
    ```bash
-   python -m venv env
-   source env/bin/activate   # On Linux/Mac
-   env\Scripts\activate      # On Windows
-
+   conda create -n Geo_GPT      # On Windows
+   conda activate pointllm
+   
 3. **Install Dependencies**
    Use pip to install the required dependencies:
    ```bash
