@@ -24,8 +24,7 @@
 4. **Set Up Environment Variables**
    Create a .env file in the root directory and add your OpenAI API key in congif.ini:
    ```bash
-   OPENAI_API_KEY=your_api_key_here
-   Replace your_api_key_here with your actual API key
+   OPENAI_API_KEY=your_api_key_here     #Replace your_api_key_here with your actual API key
 
 5. **Run the Application**
    Start the program with:
