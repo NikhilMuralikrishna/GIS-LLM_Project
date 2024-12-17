@@ -29,7 +29,7 @@
 5. **Run the Application**
    Start the program with:
    ```bash
-   GeoGPT.py
+   python GeoGPT.py
 
 ## Interface Preview
 
