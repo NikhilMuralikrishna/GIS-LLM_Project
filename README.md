@@ -13,7 +13,7 @@
 2. **Create a Virtual Environment**
    ```bash
    conda create -n Geo_GPT      # On Windows
-   conda activate pointllm
+   conda activate Geo_GPT
    
 3. **Install Dependencies**
    Use pip to install the required dependencies:
