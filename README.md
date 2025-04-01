@@ -1,7 +1,7 @@
 
 ![GeoGPT Logo](LOGO.png)
 
-# GeoGPT Project
+# GIS-LLM Project
 
 ## Setup Instructions
 
