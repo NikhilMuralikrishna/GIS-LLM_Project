@@ -34,3 +34,8 @@
 ## Interface Preview
 
 ![GeoGPT UI](Interface.png)
+
+## Open-Source DeepSeek‑R1 Integration
+
+We have implemented an open-source solution by integrating DeepSeek‑R1 into our system.
+This extends the platform’s geospatial AI capabilities with state-of-the-art open-source LLM technology.
