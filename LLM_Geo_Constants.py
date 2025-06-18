@@ -1,20 +1,24 @@
 import configparser
-
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-# Carefully manage these prompt parts!   
+# use your KEY.
+OpenAI_key = config.get('API_Key', 'OpenAI_key')
+# print("OpenAI_key:", OpenAI_key)
+
+
+# carefully change these prompt parts!   
 
 #--------------- constants for graph generation  ---------------
-graph_role = r'''A professional Geo-information scientist and programmer good at Python. You have worked on Geographic information science for more than 20 years and know every detail and pitfall when processing spatial data and coding. You know well how to set up workflows for spatial analysis tasks. You have significant experience with graph theory, application, and implementation. You are also experienced in generating maps using Matplotlib and GeoPandas.'''
+graph_role = r'''A professional Geo-information scientist and programmer good at Python. You have worked on Geographic information science more than 20 years, and know every detail and pitfall when processing spatial data and coding. You know well how to set up workflows for spatial analysis tasks. You have significant experence on graph theory, application, and implementation. You are also experienced on generating map using Matplotlib and GeoPandas.
+'''
 
 graph_task_prefix = r'Generate a graph (data structure) only, whose nodes are (1) a series of consecutive steps and (2) data to solve this question: '
 
-graph_reply_example = r"""
+graph_reply_exmaple = r"""
 ```python
 import networkx as nx
 G = nx.DiGraph()
-# Add nodes and edges for the graph...
 # Add nodes and edges for the graph
 # 1 Load hazardous waste site shapefile
 G.add_node("haz_waste_shp_url", node_type="data", path="https://github.com/gladcolor/LLM-Geo/raw/master/overlay_analysis/Hazardous_Waste_Sites.zip", description="Hazardous waste facility shapefile URL")
@@ -35,7 +39,7 @@ graph_requirement = [
                         'The data and operation form a graph.',
                         'The first operations are data loading or collection, and the output of the last operation is the final answer to the task.'
                         'Operation nodes need to connect via output data nodes, DO NOT connect the operation node directly.',
-                        'The node attributes include: 1) node_type (data or operation), 2) data_path (data node only, set to "" if not given ), and description. E.g., {"name": "County boundary", "data_type": "data", "data_path": "D:\\Test\\county.shp",  "description": "County boundary for the study area"}.',
+                        'The node attributes include: 1) node_type (data or operation), 2) data_path (data node only, set to "" if not given ), and description. E.g., {‘name’: “County boundary”, “data_type”: “data”, “data_path”: “D:\Test\county.shp”,  “description”: “County boundary for the study area”}.',
                         'The connection between a node and an operation node is an edge.', 
                         'Add all nodes and edges, including node attributes to a NetworkX instance, DO NOT change the attribute names.',
                         'DO NOT generate code to implement the steps.',
@@ -193,7 +197,6 @@ debug_requirement = [
                         "Map projection conversion is only conducted for spatial data layers such as GeoDataFrame. DataFrame loaded from a CSV file does not have map projection information.",
                         "If join DataFrame and GeoDataFrame, using common columns, DO NOT convert DataFrame to GeoDataFrame.",
                         "Remember the variable, column, and file names used in ancestor functions when using them, such as joining tables or calculating.",
-                        "If some Python packages are not installed, you can add code to install the missing packages.",
                         # "When joining tables, convert the involved columns to string type without leading zeros. ",
                         # "If using colorbar for GeoPandas or Matplotlib visulization, set the colorbar's height or length as the same as the plot for better layout.",
                         "When doing spatial joins, remove the duplicates in the results. Or please think about whether it needs to be removed.",
